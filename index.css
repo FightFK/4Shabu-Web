@@ -1,0 +1,170 @@
+/* CSS styles for the navigation bar */
+body{
+  background-color:#B4A677 ;
+}
+.navbar {
+  background-color: #B4A677;
+}
+
+.navbar-text,
+.nav-link{
+  font-size:medium;
+  color:white !important;
+}
+.logo{
+  background-color: #3F2104;
+  border-radius: 30px;
+  width:45%;
+  transform: translateX(50px);
+  border: 0.5px solid gray;
+}
+
+
+@font-face{
+    font-family: 'AppleThin';
+    src: url('Font/AppleThin.ttf') format('ttf');
+}
+
+.user {
+  width: 70px;
+  height: auto;
+  margin-left: auto; /* ย้าย user ไปทางขวาของ Navbar */
+  margin-right: 20px; /* เพิ่มระยะขวาของ user */
+  background-color: white;
+  border-radius: 60px;
+}
+
+.promo1{
+    width: 30%;
+    height: auto;
+    display: inline-block;
+    padding: 10px;
+  border: 5px solid gray;
+  margin: 0;
+}
+
+.promo2{
+    width: 30%;
+    height: auto;
+}
+.home1{
+    width: 30%;
+    height: auto;
+   padding: 10px;
+   border: 5px solid gray;
+   margin: 0;
+}
+.home2{
+    background-color: black;
+}
+.para1{
+    position: relative;
+    background-color: aqua;
+}
+
+#carouselExample{
+    background-color: #DEDCD1;
+}
+
+#carouselExample img{
+    object-fit: contain;
+    width: 1200px;
+    height: 680px;
+    background-color: #DEDCD1;
+}
+
+.carousel-control-prev, .carousel-control-next{
+    width: 20%;
+    height: 30px;
+    margin: auto;
+    border-radius: 60px;
+    
+}
+
+.carousel-control-prev{
+  margin-left: 100px;
+}
+
+.carousel-control-next{
+  margin-right: 100px;
+}
+
+#carouselExample .carousel-control-next-icon{
+  width: 500px; /* ปรับความกว้างตามต้องการ */
+  height: 500px; /* ปรับความสูงตามต้องการ */
+}
+
+.menubar{
+    margin-top: 80px;
+}
+
+
+----------------------------
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48;
+}
+.hov-primary {
+  transition: all 0.2s ease-in-out;
+}
+.hov-primary:hover {
+  background-color: #0d6efd;
+  color: white !important;
+  cursor: pointer;
+  /* color: var(--bs-btn-bg); */
+}
+.bg-gray-100 {
+  background-color: #f8f9fa;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+aside li {
+  list-style: none;
+  text-decoration: none;
+  padding: 0.5rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  border-radius: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+.full-height-overflow {
+  height: 100vh;
+  overflow: auto;
+}
+
+
+
+
+/* adjust Header main-content Footer */
+html{
+  height:100%;
+}
+body{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+header{
+  flex:0 0 auto;
+}
+
+#main-content{
+  flex:1 0 auto;
+  background-color:bisque;
+}
+
+#main-content div{
+  width: 100%;
+  margin:0 auto;
+}
+
+/* .card-img-top{
+  width: 5%;
+} */
+footer{
+  flex:0 0 auto;
+}
+
+/* news */

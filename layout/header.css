@@ -1,0 +1,12 @@
+.navbar {
+    background-color: blue; /* เปลี่ยนสีพื้นหลัง Navbar */
+}
+
+.navbar-brand,
+.navbar-nav .nav-link {
+    color: #ffffff !important; /* เปลี่ยนสีข้อความใน Navbar เป็นสีขาว */
+}
+
+.navbar-toggler-icon {
+    border-color: #ffffff; /* เปลี่ยนสี icon ของ Navbar toggler เป็นสีขาว */
+}

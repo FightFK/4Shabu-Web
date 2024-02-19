@@ -34,7 +34,7 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
         <img src="logo.png" style="width:80px">
-        <a class="navbar-brand" href="#">4Shabu Management System</a>
+        <a class="navbar-brand" href="#"><i class="fa-solid fa-bars-progress me-1" ></i>4Shabu Management System</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -54,7 +54,7 @@
                         Hello, <?php echo $row['username']?>
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="member.php">จัดการสมาชิก</a></li>
+                        <li><a class="dropdown-item" href="member.php"><i class="fa-regular fa-user me-2"></i>จัดการสมาชิก</a></li>
                         <li><hr class="dropdown-divider"></li>
                         <li><a class="dropdown-item bg-danger text-light"  href="logout.php">Logout</a></li>
                     </ul>

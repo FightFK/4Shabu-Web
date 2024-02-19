@@ -63,7 +63,7 @@
 <section id="main-content">
 <div class="card-group">
   <div class="card">
-    <img src="news1.png" class="card-img-top" alt="news1">
+    <img src="img/news1.png" class="card-img-top" alt="news1">
     <div class="card-body">
       <h5 class="card-title">Card title</h5>
       <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
@@ -73,7 +73,7 @@
     </div>
   </div>
   <div class="card">
-    <img src="news2.png" class="card-img-top" alt="news2">
+    <img src="img/news2.png" class="card-img-top" alt="news2">
     <div class="card-body">
       <h5 class="card-title">Card title</h5>
       <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
@@ -83,7 +83,7 @@
     </div>
   </div>
   <div class="card">
-    <img src="news3.png" class="card-img-top" alt="news3">
+    <img src="img/news3.png" class="card-img-top" alt="news3">
     <div class="card-body">
       <h5 class="card-title">Card title</h5>
       <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>

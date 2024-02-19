@@ -25,11 +25,11 @@ $tables = $stmt->fetchAll(PDO::FETCH_ASSOC);
         <div class="col-2 col-md-2 col-sm-2" style="margin: 20px;">
             <?php if($table['table_status'] == 0) : // โต๊ะว่าง ?>
                 <a href="#" class="btn btn-success btn-lg" target="_blank">
-                    <?= 'Table ' . $table['table_name']; // เพิ่มคำว่า "Table" นำหน้าชื่อโต๊ะ ?>
+                    <i class="fas fa-chair"></i> <?= 'Table ' . $table['table_name']; // เพิ่มคำว่า "Table" นำหน้าชื่อโต๊ะ ?>
                 </a>
             <?php else : // โต๊ะถูกจอง ?>
                 <a href="#" class="btn btn-danger disabled btn-lg" target="_blank">
-                    <?= 'Table ' . $table['table_name']; // เพิ่มคำว่า "Table" นำหน้าชื่อโต๊ะ ?>
+                    <i class="fas fa-chair"></i> <?= 'Table ' . $table['table_name']; // เพิ่มคำว่า "Table" นำหน้าชื่อโต๊ะ ?>
                 </a>
             <?php endif; ?>
         </div>
@@ -44,7 +44,7 @@ $tables = $stmt->fetchAll(PDO::FETCH_ASSOC);
             <select name="table_id" id="table_id" class="form-control">
                 <option value="" selected disabled>กรุณาเลือกโต๊ะ</option>
                 <?php foreach ($tables as $table) : ?>
-                    <option value="<?= $table['id'] ?>"><?= 'Table ' . $table['table_name'] ?></option>
+                    <option value="<?= $table['id'] ?>"><i class="fas fa-chair"></i> <?= 'Table ' . $table['table_name'] ?></option>
                 <?php endforeach; ?>
             </select>
         </div>

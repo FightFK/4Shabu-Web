@@ -10,9 +10,20 @@ if(!isset($_SESSION['user_login'])){
 
 // Get user_id from session
 $user_id = $_SESSION['user_login'];
+//Product ID
+$productIds = [];
+foreach(($_SESSION['cart']??[]) as $cartId => $cartQty){
+    $productIds[]=$cartId;
+}
+
+$ids =0;
+if(count($productIds)>0){
+    $ids = implode(',',$productIds);
+}
+
 
 //ดึงข้อมูลจากตาราง Product มาแสดง
-$sql = "SELECT * FROM product";
+$sql = "SELECT * FROM product WHERE id IN ($ids)";
 $stmt = $conn->query($sql);
 $rows = $stmt->rowCount();
 // Product Select Edit
@@ -23,7 +34,7 @@ $rows = $stmt->rowCount();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Order</title>
+    <title>Cart</title>
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="order.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
@@ -76,7 +87,7 @@ $rows = $stmt->rowCount();
   </nav>
   <!-- navbar -->
 
-  <h4 class="text-center mt-4">Menu</h4>
+  <h4 class="text-center mt-4">Cart</h4>
  
   <?php if (!empty($_SESSION['message'])): ?>
     <div class="alert alert-warning alert-dismissible fade show" role="alert">
@@ -87,25 +98,65 @@ $rows = $stmt->rowCount();
     </div>
     <?php unset($_SESSION['message']); ?>
   <?php endif; ?>
-<div class="row justify-content-center">
-    <?php if ($rows > 0): ?>
-        <?php while ($product = $stmt->fetch(PDO::FETCH_ASSOC)): ?>
-            <div class="col-md-3 mb-4">
-                <div class="card">
-                    <img src="upload_image/<?php echo $product['profile_image'] ?>" class="card-img-top" alt="Product Image">
-                    <div class="card-body">
-                        <h5 class="card-title"><?php echo $product['product_name']; ?></h5>
-                        <p class="card-text text-success mb-0"><?php echo $product['price']; ?> ฿</p>
-                        <p class="card-text text-muted"><?php echo $product['detail']; ?></p>
-                        <a href="cart-add.php?id=<?php echo $product['id']?>&user_id=<?php echo $user_id; ?>" class="btn btn-primary w-100">
-                            Add to Cart <i class="fas fa-cart-plus"></i>
-                        </a>
-                    </div>
-                </div>
+
+
+        <div class="row mx-auto " style="width:80%">
+            <div class="col-12">
+                <form>
+            <table class="table table-bordered border-info ">
+            <thead>
+                <tr>
+                    <th style="width: 150px;">Image</th>
+                    <th style="width:200px">Product Name</th>
+                    <th style="width: 150px;">Price</th>
+                    <th style="width: 100px;">Quantity</th>
+                    <th style="width: 200px;">Total</th>
+                   
+
+                    <th style="width: 120px;">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php if ($rows > 0): ?>
+                    <?php while ($product = $stmt->fetch(PDO::FETCH_ASSOC)): ?>
+                        <tr>
+                            <td>
+                                <?php if (!empty($product['profile_image'])): ?>
+                                    <img src="upload_image/<?php echo $product['profile_image'] ?>" width="100" alt="Product Image">
+                                <?php else: ?>
+                                    <img src="img/Null" width="100" alt="Product Image"/>
+                                <?php endif; ?>
+                            </td>
+                            <td><?php echo $product['product_name']; ?></td>
+                            <td><?php echo number_format($product['price'], 2); ?></td>
+                            <td><input type="number" name="" value="<?php echo $_SESSION['cart'][$product['id']];?>" class="form-control"></td>
+                            <td>
+                                <?php echo number_format($product['price']*$_SESSION['cart'][$product['id']], 2);
+                                ?>
+                            </td>
+                            <td>
+                               
+                                <a href="delete_cart.php?id=<?php echo $product['id']; ?>" class="btn btn-outline-danger btn-sm">
+                                    <i class="fa-solid fa-trash"></i> Delete
+                                </a>
+                            </td>
+                        </tr>
+                    <?php endwhile; ?>
+                    <tr>
+                        <td colspan ="6" class="text-end">
+    
+                            <a href="checkout.php" class="btn btn-lg btn-primary">Checkout</a>
+                        </td>
+                    </tr>
+                <?php else: ?>
+                    <tr>
+                        <td colspan="6"><h3 class="text-center text-danger">Not Found</h3></td>
+                    </tr>
+                <?php endif; ?>
+            </tbody>
+        </table>
             </div>
-        <?php endwhile; ?>
-    <?php endif;?>
-</div>
+        </div>
 
 
 </body>

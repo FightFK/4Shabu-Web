@@ -8,15 +8,17 @@ if(!isset($_SESSION['admin_login'])){
 $product_name = trim($_POST['product_name']);
 $price = trim($_POST['price']);
 $imgname = $_FILES['profile_image']['name'];
+$detail = trim($_POST['detail']); // เพิ่มการรับค่า detail จากฟอร์ม
 
 $image_tmp = $_FILES['profile_image']['tmp_name'];
 $folder = "upload_image/";
 $image_location = $folder . $imgname;
 
-$sql = "INSERT INTO product (product_name, price, profile_image) VALUES (:product_name, :price, :profile_image)";
+$sql = "INSERT INTO product (product_name, price, profile_image,detail) VALUES (:product_name, :price, :profile_image,:detail)";
 $stmt = $conn->prepare($sql);
 $stmt->bindParam(':product_name', $product_name);
 $stmt->bindParam(':price', $price);
+$stmt->bindParam(':detail', $detail);
 $stmt->bindParam(':profile_image', $imgname);
 
 if ($stmt->execute()) {

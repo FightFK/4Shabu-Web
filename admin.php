@@ -38,7 +38,12 @@
         <input type="file" name="profile_image" class="form-control" accept="image/png, image/jpg,image/jpeg">
       </div> 
     </div>
-    <?php if (!empty($_SESSION['message'])): ?>
+    
+            <div class="mb-3">
+                <label class="form-label">Detail</label>
+                <textarea name="detail" class="form-control"></textarea>
+            </div>
+            <?php if (!empty($_SESSION['message'])): ?>
     <div class="alert alert-warning alert-dismissible fade show" role="alert">
         <?php echo $_SESSION['message']; ?>
         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
@@ -46,8 +51,7 @@
         </button>
     </div>
     <?php unset($_SESSION['message']); ?>
-<?php endif; ?>
-
+    <?php endif; ?>
     <button class="btn btn-info me1" type="submit">Add<i class="fa-solid fa-file m"></i></button>
     <hr class="my-4">
   </form>
@@ -60,6 +64,7 @@
                 <tr>
                     <th style="width: 150px;">Image</th>
                     <th>Product Name</th>
+                    <th>Description</th>
                     <th style="width: 150px;">Price</th>
                     <th style="width: 200px;">Action</th>
                 </tr>
@@ -76,12 +81,13 @@
                                 <?php endif; ?>
                             </td>
                             <td><?php echo $product['product_name']; ?></td>
+                            <td><?php echo $product['detail']; ?></td>
                             <td><?php echo number_format($product['price'], 2); ?></td>
                             <td>
-                                <a href="admin.php?id=<?php echo $product['id']; ?>" class="btn btn-outline-dark btn-sm me-2">
+                                <a href="edit_product.php?id=<?php echo $product['id']; ?>" class="btn btn-outline-dark btn-sm me-2">
                                     <i class="fa-solid fa-file-pen"></i> Edit
                                 </a>
-                                <a href="admin.php?id=<?php echo $product['id']; ?>" class="btn btn-outline-danger btn-sm">
+                                <a href="delete_product.php?id=<?php echo $product['id']; ?>" class="btn btn-outline-danger btn-sm">
                                     <i class="fa-solid fa-trash"></i> Delete
                                 </a>
                             </td>

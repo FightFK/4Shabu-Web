@@ -10,12 +10,16 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Login</title>
+        <link rel="icon" type="image/png" href="img/logo.png  ">
         <link rel="stylesheet" href="login.css">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"/>
+        <link rel="stylesheet" href="assets/fontawesome/css/fontawesome.min.css"/>
+        <link rel="stylesheet" href="assets/fontawesome/css/brands.min.css"/>
+        <link rel="stylesheet" href="assets/fontawesome/css/solid.min.css"/>
     </head>
-    <body>
+    <body class="">
         <div class="login-container">
-            <div class ="logo"><img src="logo.png"></div>
+            <div class ="logo"><img src="img/logo.png"></div>
             <hr>
             <h2>Login</h2>
             <hr>
@@ -45,19 +49,18 @@
                     </div>
                 <?php } ?>
                 <div class="input-group">
-                    <label for="username">Username:</label>
+                    <label for="username"><i class="fa-regular fa-user me-1"></i>Username:</label>
                     <input type="text" id="username" name="username" required>
                 </div>
                 <div class="input-group">
-                    <label for="password">Password:</label>
+                    <label for="password"><i class="fa-solid fa-key me-1"></i>Password:</label>
                     <input type="password" id="password" name="password" required>
                 </div>
-                <button type="submit" name="signin" class="btn btn-success">Login</button>
+                <button type="submit" name="signin" class="btn btn-success ">Login</button>
             </form>
             <br>
             <div class="signup-link">
-                <p>Don't have an account? <a href="register.php" style="text-decoration: underline;
-    ">Sign up</a></p>
+                <p>Don't have an account? <i class="me-1 fa-solid fa-user-plus"></i><a href="register.php" style="text-decoration: underline;">Sign up</a></p>
             </div>
         </div>
     </body>

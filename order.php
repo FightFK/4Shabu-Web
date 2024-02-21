@@ -36,8 +36,8 @@ $rows = $stmt->rowCount();
    <!-- navbar -->
   <nav class="navbar navbar-expand-lg">
     <div class="container-fluid">
-      <a class="navbar-brand me-auto" href="#">
-        <img class="logo" src="logo.png" alt="Logo">
+      <a class="navbar-brand me-auto" href="index.php">
+        <img class="logo" src="img/logo.png" alt="Logo">
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -67,7 +67,7 @@ $rows = $stmt->rowCount();
             </a>
             <ul class="dropdown-menu ">
               <li><a class="dropdown-item" href="#">Account</a></li>
-              <li><a class="dropdown-item btn btn-danger" href="logout.php">Logout</a></li>
+              <li><a class="dropdown-item bg-danger text-light" href="logout.php">Logout</a></li>
             </ul>
           </li>
         </ul>
@@ -76,7 +76,7 @@ $rows = $stmt->rowCount();
   </nav>
   <!-- navbar -->
 
-  <h4 class="text-center mt-4">Menu</h4>
+  <h1 class="text-center mt-4 bg-secondary bg-gradient text-dark">Menu</h1>
  
   <?php if (!empty($_SESSION['message'])): ?>
     <div class="alert alert-warning alert-dismissible fade show" role="alert">
@@ -87,7 +87,7 @@ $rows = $stmt->rowCount();
     </div>
     <?php unset($_SESSION['message']); ?>
   <?php endif; ?>
-<div class="row justify-content-center">
+<div class="row justify-content-center ms-5 me-5 mt-5 bg-info">
     <?php if ($rows > 0): ?>
         <?php while ($product = $stmt->fetch(PDO::FETCH_ASSOC)): ?>
             <div class="col-md-3 mb-4">

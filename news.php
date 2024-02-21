@@ -21,8 +21,8 @@
   <!-- navbar -->
   <nav class="navbar navbar-expand-lg">
     <div class="container-fluid">
-      <a class="navbar-brand me-auto" href="#">
-        <img class="logo" src="logo.png" alt="Logo">
+      <a class="navbar-brand me-auto" href="index.php">
+        <img class="logo" src="img/logo.png" alt="Logo">
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>

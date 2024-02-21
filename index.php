@@ -12,18 +12,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
+    <link rel="icon" type="image/png" href="img/logo.png  ">
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="assets/fontawesome/css/brands.min.css"/>
     <link rel="stylesheet" href="assets/fontawesome/css/solid.min.css"/>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 </head>
 <body>
-    <header>
-    <!-- navbar -->
+   <!-- Header -->
+  <header>
+  <!-- navbar -->
   <nav class="navbar navbar-expand-lg">
     <div class="container-fluid">
       <a class="navbar-brand me-auto" href="#">
-        <img class="logo" src="logo.png" alt="Logo">
+        <img class="logo" src="img/logo.png" alt="Logo">
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -45,12 +47,12 @@
         </ul>
         <ul class="navbar-nav ms-auto">
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle " href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Setting
             </a>
             <ul class="dropdown-menu ">
               <li><a class="dropdown-item" href="#">Account</a></li>
-              <li><a class="dropdown-item btn btn-danger" href="logout.php">Logout</a></li>
+              <li><a class="dropdown-item bg-danger text-light" href="logout.php">Logout</a></li>
             </ul>
           </li>
         </ul>
@@ -58,43 +60,55 @@
     </div>
   </nav>
   <!-- navbar -->
-</header>
+  </header>
+  <!-- Header -->
 
-    <section id="main-content">
+    <section id="main-content" class="">
     <div>
-        <h1 >
-            PROMOTION FOR TODAY!!!
-        </h1>
+            <div class="container">
+             <div class="row justify-content-center">
+                <div class="col-8">
+                    <div class="card">
+                        <div class="card-body">
+                            <h1 class="card-title text-center"  style="color: #FF5733; font-size: 2.5rem; font-weight: bold;">PROMOTION FOR TODAY!!!</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
         <div id="carouselExample" class="carousel slide" data-ride="carousel" >
             <center><div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="promo1.png" class="d-block" alt="Slide 1">
+                    <img src="img/promo1.png" class="d-block" alt="Slide 1">
                 </div>
                 <div class="carousel-item">
-                    <img src="promo2.png" class="d-block" alt="Slide 2">
+                    <img src="img/promo2.png" class="d-block" alt="Slide 2">
                 </div>
                 <div class="carousel-item">
-                    <img src="promo3.png" class="d-block" alt="Slide 3">
+                    <img src="img/promo3.png" class="d-block" alt="Slide 3">
                 </div>
                 <div class="carousel-item">
-                    <img src="promo4.png" class="d-block" alt="Slide 4">
+                    <img src="img/promo4.png" class="d-block" alt="Slide 4">
                 </div></center>
             </div>
 
             <a class="carousel-control-prev" href="#carouselExample" role="button" data-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
+            <span class="sr-only text-dark">Previous</span>
             </a>
             <a class="carousel-control-next" href="#carouselExample" role="button" data-slide="next">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
+            <span class="sr-only text-dark">Next</span>
             </a>
 
         </div>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.9/dist/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
     </section>
 
 

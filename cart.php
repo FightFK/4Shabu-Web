@@ -48,7 +48,7 @@ $rows = $stmt->rowCount();
   <nav class="navbar navbar-expand-lg">
     <div class="container-fluid">
       <a class="navbar-brand me-auto" href="#">
-        <img class="logo" src="logo.png" alt="Logo">
+        <img class="logo" src="img/logo.png" alt="Logo">
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -86,9 +86,9 @@ $rows = $stmt->rowCount();
     </div>
   </nav>
   <!-- navbar -->
-
-  <h4 class="text-center mt-4">Cart</h4>
- 
+<div class="bg-info">
+  <h2 class="text-center mt-4 mb-4">Cart</h2>
+</div>
   <?php if (!empty($_SESSION['message'])): ?>
     <div class="alert alert-warning alert-dismissible fade show" role="alert">
         <?php echo $_SESSION['message']; ?>
@@ -161,8 +161,8 @@ $rows = $stmt->rowCount();
 
 </body>
 
-    <!-- Footer -->
-    <footer class="bg-dark py-5 mt-5">
+   <!-- Footer -->
+   <footer class="bg-dark py-5 mt-5" style="position:fixed;left: 0; bottom: 0; width: 100%;">
         <div class="container text-light text-center">
           <p class="displa-5 mb-3">Hello world</p>
           <small class="text-white-50">&copy; Copy right by Bellza 555</small>

@@ -33,7 +33,7 @@
 ?>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
-        <img src="logo.png" style="width:80px">
+        <img src="./img/logo.png" style="width:80px">
         <a class="navbar-brand" href="#"><i class="fa-solid fa-bars-progress me-1" ></i>4Shabu Management System</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>

@@ -21,18 +21,20 @@ $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Home</title>
+    <title>Book Table</title>
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="book.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-          integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/fontawesome/css/fontawesome.min.css"/>
+    <link rel="stylesheet" href="assets/fontawesome/css/brands.min.css"/>
+    <link rel="stylesheet" href="assets/fontawesome/css/solid.min.css"/>
 </head>
 <body>
 <!-- navbar -->
 <nav class="navbar navbar-expand-lg">
     <div class="container-fluid">
         <a class="navbar-brand me-auto" href="#">
-            <img class="logo" src="logo.png" alt="Logo">
+            <img class="logo" src="img/logo.png" alt="Logo">
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
                 aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -61,7 +63,7 @@ $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
                     </a>
                     <ul class="dropdown-menu ">
                         <li><a class="dropdown-item" href="#">Account</a></li>
-                        <li><a class="dropdown-item btn btn-danger" href="logout.php">Logout</a></li>
+                        <li><a class="dropdown-item bg-danger text-light" href="logout.php">Logout</a></li>
                     </ul>
                 </li>
             </ul>
@@ -70,24 +72,24 @@ $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
 </nav>
 <!-- navbar -->
 
-<h1 style="margin:5px auto 5px auto;">BOOKING</h1>
-<div class="row justify-content-center">
-    <div class="col-sm-12 col-md-12">
+
+<div class="row justify-content-center card">
+    <div class="col-sm-12 col-md-12 " >
         <div class="alert alert-warning" role="alert">
             <center><h1>Table Reserve</h1></center>
         </div>
         <hr>
-        <div class="alert alert-primary">
-            <div class="row justify-content-center" style="margin-top: 5px; margin-bottom-5px;">
+        <div class="alert alert-primary  ">
+            <div class="row justify-content-center" style="margin-top: 5px; margin-bottom-5px;" >
                 <?php foreach ($result as $row) : ?>
                     <div class="col-2 col-md-2 col-sm-2" style="margin: 20px;">
                         <?php if($row['table_status'] == 0) : // โต๊ะว่าง ?>
                             <button class="btn btn-success btn-lg" disabled>
-                                <?= 'Table ' . $row['table_name']; // เพิ่มคำว่า "Table" นำหน้าชื่อโต๊ะ ?>
+                            <i class="fas fa-chair"></i> <?= 'Table ' . $row['table_name']; // เพิ่มคำว่า "Table" นำหน้าชื่อโต๊ะ ?>
                             </button>
                         <?php else : // โต๊ะถูกจอง ?>
                             <button class="btn btn-danger disabled btn-lg">
-                                <?= 'Table ' . $row['table_name']; // เพิ่มคำว่า "Table" นำหน้าชื่อโต๊ะ ?>
+                            <i class="fas fa-chair"></i> <?= 'Table ' . $row['table_name']; // เพิ่มคำว่า "Table" นำหน้าชื่อโต๊ะ ?>
                             </button>
                         <?php endif; ?>
                     </div>

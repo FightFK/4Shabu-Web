@@ -18,19 +18,19 @@ $stmt->execute();
 $tables = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 ?>
-<h1>สถานะโต๊ะ</h1>
+<h1 class="ms-5 mt-2">สถานะโต๊ะ</h1>
 <hr>
 <div class="row justify-content-center" style="margin-top: 50px;">
     <?php foreach ($tables as $table) : ?>
         <div class="col-2 col-md-2 col-sm-2" style="margin: 20px;">
             <?php if($table['table_status'] == 0) : // โต๊ะว่าง ?>
-                <a href="#" class="btn btn-success btn-lg" target="_blank">
+                <button class="btn btn-success btn-lg" disabled>
                     <i class="fas fa-chair"></i> <?= 'Table ' . $table['table_name']; // เพิ่มคำว่า "Table" นำหน้าชื่อโต๊ะ ?>
-                </a>
+                </button>
             <?php else : // โต๊ะถูกจอง ?>
-                <a href="#" class="btn btn-danger disabled btn-lg" target="_blank">
+                <button class="btn btn-success btn-lg" disabled>
                     <i class="fas fa-chair"></i> <?= 'Table ' . $table['table_name']; // เพิ่มคำว่า "Table" นำหน้าชื่อโต๊ะ ?>
-                </a>
+                    </button>
             <?php endif; ?>
         </div>
     <?php endforeach; ?>

@@ -8,16 +8,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Signup</title>
+    <link rel="icon" type="image/png" href="img/logo.png  ">
     <link rel="stylesheet" href="register.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="assets/fontawesome/css/fontawesome.min.css"/>
+    <link rel="stylesheet" href="assets/fontawesome/css/brands.min.css"/>
+    <link rel="stylesheet" href="assets/fontawesome/css/solid.min.css"/>
 </head>
 <body>
     <div class="container">
-        <div class="row justify-content-center mt-5">
+        <div class="row justify-content-center ">
             <div class="col-md-6">
                 <div class="signup-container">
                     <div class="logo text-center">
-                        <img src="logo.png" alt="Logo">
+                        <img src="img/logo.png" alt="Logo">
                     </div>
                     <hr>
                     <h2 class="text-center">Sign Up</h2>
@@ -48,22 +52,22 @@
                             </div>
                         <?php } ?>
                         <div class="form-group">
-                            <label for="username">Username:</label>
+                            <label for="username"><i class="fa-regular fa-user me-1"></i>Username:</label>
                             <input type="text" id="username" name="username" class="form-control" required>
                         </div>
                         <div class="form-group">
-                            <label for="email">Email:</label>
+                            <label for="email"><i class="fa-regular fa-envelope me-1"></i>Email:</label>
                             <input type="email" id="email" name="email" class="form-control" required>
                         </div>
                         <div class="form-group">
-                            <label for="password">Password:</label>
+                            <label for="password"><i class="fa-solid fa-key me-1"></i>Password:</label>
                             <input type="password" id="password" name="password" class="form-control" required>
                         </div>
                         <div class="form-group">
-                            <label for="confirm-password">Confirm Password:</label>
+                            <label for="confirm-password"><i class="fa-solid fa-key me-1"></i>Confirm Password:</label>
                             <input type="password" id="confirm-password" name="confirm_password" class="form-control" required>
                         </div>
-                        <div class="text-center">
+                        <div class="mt-3">
                             <button type="submit" name= "signup" class="btn btn-success">Sign Up</button>
                         </div>
                     </form>
